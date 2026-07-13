@@ -1,0 +1,327 @@
+/* ============================================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding não altere o tamanho final dos elementos */
+}
+
+html {
+    scroll-behavior: smooth; /* Deslize suave ao clicar nos links do menu */
+}
+
+body {
+    background-color: #ffdae5;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka', sans-serif;
+    overflow-x: hidden; /* Evita barra de rolagem horizontal devido às animações */
+}
+
+/* ============================================================
+   2. CABEÇALHO E NAVEGAÇÃO
+   ============================================================ */
+.titulo-principal {
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: #ff85a2;
+    margin-bottom: 0;
+}
+
+nav {
+    background-color: #ffb6c1;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-bottom: 3px solid #ff85a2;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 600;
+    font-family: 'Fredoka', sans-serif;
+    padding: 6px 10px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #ff85a2;
+    color: white;
+}
+
+/* Botão de destaque no Menu (Entrar) */
+.botao-nav {
+    background-color: #ff69b4;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.botao-nav:hover {
+    background-color: #ff85c1;
+    transform: scale(1.05);
+}
+
+/* ============================================================
+   3. ESTRUTURA DE CONTEÚDO (CARDS)
+   ============================================================ */
+.card-section {
+    background: white;
+    margin: 20px auto;
+    padding: 25px;
+    max-width: 900px;
+    border-radius: 20px;
+}
+
+.titulo-secao {
+    font-family: 'Playwrite IE', cursive;
+    color: #ff4d6d;
+    border-bottom: 2px solid #ffccd5;
+    margin-bottom: 15px;
+}
+
+/* ============================================================
+   4. SEÇÃO DE PERSONAGENS
+   ============================================================ */
+.grid-personagens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.item-personagem {
+    text-decoration: none;
+    background-color: #fff0f5;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.item-personagem:hover {
+    border-color: #ff85a2;
+    transform: translateY(-5px);
+}
+
+.card-img {
+    position: relative;
+}
+
+.card-img img {
+    width: 80px;
+    height: 90px;
+    border-radius: 15px;
+    display: block;
+}
+
+.nome-sobre {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(255, 133, 162, 0.85);
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 4px;
+    border-radius: 0 0 15px 15px;
+}
+
+/* ============================================================
+   5. GALERIA E CARROSSEL ANIMADO
+   ============================================================ */
+.container-carrossel {
+    overflow: hidden;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+}
+
+.faixa-carrossel {
+    display: flex;
+    width: 100%;
+}
+
+.grupo-imagens {
+    display: flex;
+    gap: 15px;
+    animation: scroll 30s linear infinite; /* Animação base */
+}
+
+.grupo-imagens:hover {
+    animation-play-state: paused; /* Para o carrossel no hover */
+}
+
+.grupo-imagens img {
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 3px solid #ffccd5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Definição das direções das faixas */
+.direita-para-esquerda .grupo-imagens {
+    animation-name: scroll-esquerda;
+}
+
+.esquerda-para-direita .grupo-imagens {
+    animation-name: scroll-direita;
+}
+
+@keyframes scroll-esquerda {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-direita {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+/* ============================================================
+   6. MODAL (IMAGEM EXPANDIDA)
+   ============================================================ */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid #ff85a2;
+    border-radius: 10px;
+    animation: zoomIn 0.3s;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.5); }
+    to { transform: scale(1); }
+}
+
+.fechar {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ============================================================
+   7. FORMULÁRIO E ALERTA (TARGET)
+   ============================================================ */
+.botao-enviar {
+    display: inline-block;
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.alerta-suspeito {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ativa o alerta quando o ID é clicado via link */
+.alerta-suspeito:target {
+    display: flex;
+}
+
+.alerta-conteudo {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    border: 5px solid #ff4d6d;
+    text-align: center;
+    max-width: 400px;
+    position: relative;
+    animation: surge 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.alerta-conteudo h2 {
+    color: #ff4d6d;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 15px;
+}
+
+.botao-fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    text-decoration: none;
+    color: #ff4d6d;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@keyframes surge {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ============================================================
+   8. RODAPÉ (FOOTER)
+   ============================================================ */
+.rodape-final {
+    background-color: #ff85a2;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    border-top: 5px solid #ffccd5;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.frase-ameaca {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.frase-diversao {
+    font-family: 'Pacifico', cursive;
+    font-size: 32px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.rodape-final:hover .frase-diversao {
+    transform: scale(1.1);
+}

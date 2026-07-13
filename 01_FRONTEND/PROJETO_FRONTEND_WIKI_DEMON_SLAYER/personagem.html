@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Personagem - Wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1 id="nome-titulo">Nome do Personagem</h1>
+</header>
+
+<nav>
+    <a href="index.html">Início</a>
+</nav>
+
+<div class="container">
+    <!-- Infobox Lateral -->
+    <div class="infobox">
+        <h2 id="nome-info">Nome</h2>
+        <img src="https://via.placeholder.com/280x350" alt="Foto do personagem">
+        <table class="infobox-dados">
+            <tr><td><b>Raça:</b></td><td id="raca">Humano</td></tr>
+            <tr><td><b>Afiliação:</b></td><td id="afiliacao">Corpo de Caçadores</td></tr>
+        </table>
+    </div>
+
+    <div class="historia">
+        <h2>História</h2>
+        <p id="descricao">Carregando informações...</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+    // Esse script pequeno aqui dentro serve para preencher a página
+    window.onload = carregarDados;
+</script>
+</body>
+</html>

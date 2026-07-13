@@ -1,0 +1,205 @@
+/* 
+   PROJETO: KIMETSU_ZONE WIKI
+   DESENVOLVEDOR: Gabriel Pereira Martins
+   ESTILO: Dark Mode / Fandom Style
+*/
+
+/* ============================================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   ============================================================ */
+* {
+    box-sizing: border-box; /* Garante que padding não aumente o tamanho dos elementos */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Fundo principal escuro */
+    color: #e0e0e0;           /* Cor do texto clara para leitura */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;        /* Espaçamento entre linhas para melhor leitura */
+}
+
+/* ============================================================
+   2. CABEÇALHO E NAVEGAÇÃO (HOME)
+   ============================================================ */
+
+/* Banner principal da página inicial */
+.banner-topo {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagens/kapa.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #8e1c1c; /* Linha vermelha característica */
+}
+
+.banner-topo h1 {
+    font-size: 3.5em;
+    margin: 0;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 10px #000;
+}
+
+/* Menu que fica "preso" no topo ao rolar a página */
+nav {
+    background-color: #1f1f1f;
+    padding: 15px;
+    text-align: center;
+    position: sticky; /* Efeito de menu fixo */
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+nav a {
+    color: #8e1c1c;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 20px;
+    transition: 0.3s; /* Transição suave na cor ao passar o mouse */
+}
+
+nav a:hover {
+    color: #ff4d4d; /* Cor de destaque ao passar o mouse */
+}
+
+/* ============================================================
+   3. LAYOUT DA PÁGINA (CONTAINER)
+   ============================================================ */
+
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1a1a; /* Fundo ligeiramente mais claro que o body */
+    border-radius: 4px;
+}
+
+/* Grade que organiza os cards dos personagens */
+.grid-personagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo: ajusta colunas sozinho */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* ============================================================
+   4. COMPONENTES (CARDS E INFOBOX)
+   ============================================================ */
+
+/* Cartão do personagem na Home */
+.card {
+    background-color: #2b2b2b;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efeito de "levitar" ao passar o mouse */
+    border-color: #8e1c1c;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Corta a imagem para preencher sem distorcer */
+}
+
+/* Tabela lateral de informações (Estilo Wiki Fandom) */
+.infobox {
+    background-color: #2b2b2b;
+    border: 2px solid #8e1c1c;
+    width: 300px;
+    float: right;      /* Posiciona na lateral direita */
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.infobox h2 {
+    text-align: center;
+    background-color: #8e1c1c;
+    color: white;
+    margin: -10px -10px 10px -10px; /* Remove margens para encostar na borda */
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.infobox img {
+    width: 100%; /* Ajusta imagem ao tamanho da lateral */
+    height: auto;
+    border-radius: 4px;
+}
+
+/* ============================================================
+   5. PÁGINA INTERNA DO PERSONAGEM
+   ============================================================ */
+
+/* Banner de entrada do personagem (Destaque) */
+.banner-personagem-topo {
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    align-items: flex-end;
+}
+
+.overlay-nome {
+    padding: 40px;
+    width: 100%;
+    /* Degradê que vai do transparente para o preto do site */
+    background: linear-gradient(transparent, #121212);
+}
+
+.overlay-nome h1 {
+    font-size: 3.5em;
+    border-left: 8px solid #8e1c1c; /* Detalhe visual ao lado do nome */
+    padding-left: 20px;
+    text-shadow: 2px 2px 8px #000;
+}
+
+/* ============================================================
+   6. RODAPÉ
+   ============================================================ */
+.footer {
+    clear: both; /* Importante: impede que o float da infobox bagunce o rodapé */
+    text-align: center;
+    padding: 50px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Melhora a leitura dos textos longos */
+.conteudo-wiki p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #cccccc;
+    text-align: justify; /* Deixa o texto alinhado dos dois lados */
+}
+
+.conteudo-wiki h2 {
+    color: #8e1c1c;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+.conteudo-wiki ul {
+    list-style: square;
+    padding-left: 20px;
+    color: #e0e0e0;
+}
+
+.conteudo-wiki li {
+    margin-bottom: 10px;
+}
