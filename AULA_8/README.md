@@ -20,7 +20,7 @@ O exercício foi dividido em três etapas fundamentais, todas documentadas e com
 A primeira etapa consistiu em iniciar o servidor NestJS. Graças à configuração do TypeORM (`synchronize: true`), a tabela de usuários foi criada automaticamente no banco de dados SQLite assim que o servidor subiu sem erros.
 
 #### 📸 Comprovação 1: Logs de Inicialização do NestJS
-![Logs do Servidor](./AULA_8/Captura de tela de 2026-07-14 15-02-53.png)
+![Logs do Servidor](./https://github.com/Gabriel-Pereira-Martins23/ufmt-programacao-4/blob/main/AULA_8/Captura%20de%20tela%20de%202026-07-14%2015-02-53.png?raw=true)
 *A imagem acima mostra o terminal confirmando a compilação com 0 erros e o Nest application iniciado com sucesso.*
 
 ---
