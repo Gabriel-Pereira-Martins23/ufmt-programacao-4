@@ -38,7 +38,7 @@ Com o servidor rodando, utilizamos uma segunda aba do terminal para enviar requi
 Por fim, para comprovar que os dados foram realmente salvos no banco de dados SQLite local, acessamos a rota `/users` através do navegador.
 
 #### 📸 Comprovação 3: Resultado da Consulta no Navegador
-![Resultado do Navegador](./AULA_8/Captura de tela de 2026-07-14 15-05-53.png)
+![Resultado do Navegador](./https://github.com/Gabriel-Pereira-Martins23/ufmt-programacao-4/blob/main/AULA_8/Captura%20de%20tela%20de%202026-07-14%2015-05-53.png?raw=true)
 *A imagem acima mostra o navegador exibindo o JSON com todos os usuários cadastrados, provando que os dados foram persistidos corretamente pelo SQLite.*
 
 ---
