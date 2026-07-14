@@ -20,7 +20,7 @@ O exercício foi dividido em três etapas fundamentais, todas documentadas e com
 A primeira etapa consistiu em iniciar o servidor NestJS. Graças à configuração do TypeORM (`synchronize: true`), a tabela de usuários foi criada automaticamente no banco de dados SQLite assim que o servidor subiu sem erros.
 
 #### 📸 Comprovação 1: Logs de Inicialização do NestJS
-![Logs do Servidor](./Captura de tela de 2026-07-14 15-02-53.png)
+![Logs do Servidor](./AULA_8/Captura de tela de 2026-07-14 15-02-53.png)
 *A imagem acima mostra o terminal confirmando a compilação com 0 erros e o Nest application iniciado com sucesso.*
 
 ---
@@ -29,7 +29,7 @@ A primeira etapa consistiu em iniciar o servidor NestJS. Graças à configuraç�
 Com o servidor rodando, utilizamos uma segunda aba do terminal para enviar requisições do tipo POST para a API, inserindo utilizadores fictícios com o sobrenome "Pereira Martins" usando o comando `curl`.
 
 #### 📸 Comprovação 2: Execução dos comandos CURL
-![Requisições Terminal Lado a Lado](./Captura de tela de 2026-07-14 15-08-17.png)
+![Requisições Terminal Lado a Lado](./AULA_8/Captura de tela de 2026-07-14 15-08-17.png)
 *A imagem acima mostra o terminal dividido: do lado esquerdo os logs do servidor processando as requisições, e do lado direito os comandos `curl` sendo executados e recebendo o retorno de sucesso.*
 
 ---
@@ -38,7 +38,7 @@ Com o servidor rodando, utilizamos uma segunda aba do terminal para enviar requi
 Por fim, para comprovar que os dados foram realmente salvos no banco de dados SQLite local, acessamos a rota `/users` através do navegador.
 
 #### 📸 Comprovação 3: Resultado da Consulta no Navegador
-![Resultado do Navegador](./Captura de tela de 2026-07-14 15-05-53.png)
+![Resultado do Navegador](./AULA_8/Captura de tela de 2026-07-14 15-05-53.png)
 *A imagem acima mostra o navegador exibindo o JSON com todos os usuários cadastrados, provando que os dados foram persistidos corretamente pelo SQLite.*
 
 ---
