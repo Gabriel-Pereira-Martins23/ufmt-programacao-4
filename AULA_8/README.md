@@ -29,7 +29,7 @@ A primeira etapa consistiu em iniciar o servidor NestJS. Graças à configuraç�
 Com o servidor rodando, utilizamos uma segunda aba do terminal para enviar requisições do tipo POST para a API, inserindo utilizadores fictícios com o sobrenome "Pereira Martins" usando o comando `curl`.
 
 #### 📸 Comprovação 2: Execução dos comandos CURL
-![Requisições Terminal Lado a Lado](./AULA_8/Captura de tela de 2026-07-14 15-08-17.png)
+![Requisições Terminal Lado a Lado](./https://github.com/Gabriel-Pereira-Martins23/ufmt-programacao-4/blob/main/AULA_8/Captura%20de%20tela%20de%202026-07-14%2015-08-17.png?raw=true)
 *A imagem acima mostra o terminal dividido: do lado esquerdo os logs do servidor processando as requisições, e do lado direito os comandos `curl` sendo executados e recebendo o retorno de sucesso.*
 
 ---
