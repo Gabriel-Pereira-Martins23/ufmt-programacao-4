@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKEDEX REGIONAL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Banner no topo -->
+    <header class="pokedex-header">
+        <img src="GALERIA/pokebola-1-fotor-bg-remover-20260714114730.png" alt="Pokédex" class="logo">
+    </header>
+
+    <!-- 2. Área de controles -->
+    <div class="controls">
+        <input type="text" id="search-input" placeholder="Busque por Nome ou ID (ex: 25)">
+        <button id="search-btn">Buscar</button>
+
+        <select id="type-filter">
+            <option value="all">Todos os Tipos</option>
+            <!-- Tipos serão preenchidos via JS -->
+
+        </select>
+    </div>
+
+    <!-- 3. Área de exibição em formato de grid -->
+    <div class="pokedex-container" id="pokedex-list">
+        <!-- Os cards aparecerão aqui -->
+         
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

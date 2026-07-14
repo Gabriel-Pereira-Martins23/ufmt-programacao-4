@@ -1,0 +1,209 @@
+/* Definições de Cores e Variáveis */
+:root {
+    --bg-gradient: linear-gradient(135deg, #e0eafc, #cfdef3); /* Fundo pastel super clean */
+    --glass-bg: rgba(255, 255, 255, 0.45); /* Base do Glassmorphism */
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+    --text-color: #2c3e50;
+    --text-muted: #7f8c8d;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+/* Banner do Topo (Clean e Minimalista) */
+.pokedex-header {
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.pokedex-header .logo {
+    max-height: 150px;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Área de Controles com Glassmorphism */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    margin: 0 auto 30px auto;
+    width: 80%;
+    max-width: 800px;
+    
+    /* Efeito de Vidro */
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+.controls input,
+.controls select,
+.controls button {
+    padding: 12px 18px;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.controls input {
+    width: 280px;
+}
+
+.controls input:focus,
+.controls select:focus {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.controls button {
+    background: #4a90e2;
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.controls button:hover {
+    background: #357abd;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+/* Grid de Cards */
+.pokedex-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 0 20px 50px 20px;
+    margin: 0 auto;
+    width: 85%;
+    max-width: 1200px;
+}
+
+/* Cards com Glassmorphism */
+.pokemon-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 20px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.pokemon-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.pokemon-id {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 700;
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.pokemon-img-container {
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+    filter: drop-shadow(0 8px 10px rgba(0,0,0,0.06));
+    transition: transform 0.3s ease;
+}
+
+.pokemon-card:hover .pokemon-img-container {
+    transform: scale(1.1);
+}
+
+.pokemon-img {
+    max-width: 110px;
+    max-height: 110px;
+}
+
+.pokemon-name {
+    margin: 5px 0 15px 0;
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.pokemon-types {
+    display: flex;
+    gap: 8px;
+}
+
+/* Estilo Clean das tags de tipos */
+.pokemon-type {
+    padding: 6px 14px;
+    border-radius: 30px;
+    color: white;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Cores Suaves dos Tipos baseadas em tons pastéis */
+.type-normal { background-color: #b2bec3; }
+.type-fogo { background-color: #ff7675; }
+.type-agua { background-color: #74b9ff; }
+.type-grama { background-color: #55efc4; color: #2d3436; }
+.type-eletrico { background-color: #ffeaa7; color: #2d3436; }
+.type-gelo { background-color: #81ecec; color: #2d3436; }
+.type-lutador { background-color: #e17055; }
+.type-veneno { background-color: #a29bfe; }
+.type-terra { background-color: #e2b474; }
+.type-voador { background-color: #81ecec; }
+.type-psiquico { background-color: #fda7df; }
+.type-inseto { background-color: #badc58; color: #2d3436; }
+.type-pedra { background-color: #d35400; }
+.type-fantasma { background-color: #8c7ae6; }
+.type-dragao { background-color: #4834d4; }
+.type-sombrio { background-color: #57606f; }
+.type-metal { background-color: #95afc0; }
+.type-fada { background-color: #ff9ff3; }
+
+/* Mensagens de Feedback */
+.searching, .error, .no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 30px;
+    background: var(--glass-bg);
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(8px);
+}
