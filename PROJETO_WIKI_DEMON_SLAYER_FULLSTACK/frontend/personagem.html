@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo-aba">Personagem - KIMETSU_ZONE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">← Voltar para a Home</a>
+    </nav>
+
+    <p id="status-carregamento" style="text-align:center; padding: 40px;">Carregando personagem...</p>
+    <p id="status-erro" class="mensagem-erro" style="text-align:center;" hidden></p>
+
+    <div id="conteudo-personagem" hidden>
+        <div class="banner-personagem-topo" id="banner-topo">
+            <div class="overlay-nome">
+                <h1 id="nome-personagem"></h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <aside class="infobox">
+                <h2 id="nome-infobox"></h2>
+                <img id="imagem-infobox" src="" alt="">
+            </aside>
+
+            <article class="conteudo-wiki" id="texto-personagem">
+                <!-- Conteúdo HTML vindo da API é inserido aqui dinamicamente -->
+            </article>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>KIMETSU_ZONE - 2026. A Wiki feita por fãs.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/personagem.js"></script>
+</body>
+</html>

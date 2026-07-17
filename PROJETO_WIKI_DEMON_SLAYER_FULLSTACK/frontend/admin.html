@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - KIMETSU_ZONE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="banner-topo" style="height:180px;">
+    <h1>Painel Admin</h1>
+    <p>Gerencie os personagens da wiki</p>
+</header>
+
+<nav>
+    <a href="index.html">← Voltar para a Home</a>
+    <a href="#" id="link-logout">Sair</a>
+</nav>
+
+<div class="container">
+    <h2 id="form-titulo">Novo personagem</h2>
+
+    <form id="form-personagem" class="form-auth">
+        <input type="hidden" id="personagem-id">
+
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" required>
+
+        <label for="imagem">Imagem (caminho ou URL)</label>
+        <input type="text" id="imagem" placeholder="imagens/exemplo.jpg">
+
+        <label for="ordem">Ordem de apresentação</label>
+        <input type="number" id="ordem" value="0">
+
+        <label for="conteudo">Conteúdo (aceita tags HTML como &lt;p&gt;, &lt;h2&gt;, &lt;ul&gt;)</label>
+        <textarea id="conteudo" rows="8" required></textarea>
+
+        <p id="mensagem-erro" class="mensagem-erro" hidden></p>
+        <p id="mensagem-sucesso" class="mensagem-sucesso" hidden></p>
+
+        <div class="acoes-form">
+            <button type="submit" id="btn-salvar">Salvar</button>
+            <button type="button" id="btn-cancelar" hidden>Cancelar edição</button>
+        </div>
+    </form>
+
+    <hr>
+
+    <h2>Personagens cadastrados</h2>
+    <table class="tabela-admin" id="tabela-personagens">
+        <thead>
+            <tr>
+                <th>Ordem</th>
+                <th>Título</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="corpo-tabela"></tbody>
+    </table>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2026 KIMETSU_ZONE - Painel administrativo</p>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

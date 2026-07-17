@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIMETSU_ZONE - Wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="banner-topo">
+    <h1>KIMETSU_ZONE</h1>
+    <p>A Enciclopédia definitiva de Demon Slayer</p>
+</header>
+
+<nav>
+    <a href="index.html">Início</a>
+    <a href="#personagens">Personagens</a>
+    <a href="#sobre">Sobre o Anime</a>
+    <a href="admin.html">Painel Admin</a>
+    <a href="#" id="link-logout">Sair (<span id="usuario-logado"></span>)</a>
+</nav>
+
+<div class="container">
+
+    <section id="sobre">
+        <h2>A História de Demon Slayer</h2>
+        <p>No Japão da Era Taisho, Tanjiro Kamado é um menino de bom coração que ganha a vida vendendo carvão. No entanto, sua vida pacífica é destruída quando um demônio (Oni) massacra sua família. A única sobrevivente é sua irmã mais nova, Nezuko, que foi transformada em um demônio.</p>
+        <p>Para transformá-la de volta em humana e se vingar do demônio que matou sua família, Tanjiro decide se tornar um Caçador de Demônios.</p>
+    </section>
+
+    <hr>
+
+    <h2 id="personagens">Perfis dos Personagens</h2>
+
+    <p id="status-carregamento">Carregando personagens da API...</p>
+    <p id="status-erro" class="mensagem-erro" hidden></p>
+
+    <!-- Grade de personagens, preenchida dinamicamente via JavaScript -->
+    <div class="grid-personagens" id="grid-personagens"></div>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2026 KIMETSU_ZONE - Criado por um fã de Demon Slaye - MALDITOS SPOILERS r</p>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
